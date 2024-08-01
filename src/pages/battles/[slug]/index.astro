@@ -1,17 +1,17 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import Posts from "@layouts/Posts.astro";
-import PostDetails from "@layouts/PostDetails.astro";
+import Battles from "@layouts/Battles.astro";
+import BattleDetails from "@layouts/BattleDetails.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getPageNumbers from "@utils/getPageNumbers";
 import getPagination from "@utils/getPagination";
 
 export interface Props {
-    post: CollectionEntry<"blog">;
+    post: CollectionEntry<"battles">;
 }
 
 export async function getStaticPaths() {
-    const posts = await getCollection("blog", ({ data }) => !data.draft);
+    const posts = await getCollection("battles", ({ data }) => !data.draft);
 
     const postResult = posts.map(post => ({
         params: { slug: post.slug },
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const { post } = Astro.props;
 
-const posts = await getCollection("blog");
+const posts = await getCollection("battles");
 
 const sortedPosts = getSortedPosts(posts);
 
@@ -38,4 +38,4 @@ const pagination = getPagination({
 });
 ---
 
-{post ? <PostDetails post={post} /> : <Posts {...pagination} />}
+{post ? <BattleDetails post={post} /> : <Battles {...pagination} />}

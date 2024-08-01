@@ -132,7 +132,7 @@ Keep in mind that `/src/content/_schemas.ts` has been replaced with `/src/conten
 
 Besides, there is no longer `BlogFrontmatter` type exported from `/src/content/config.ts`.
 
-Therefore, all the `BlogFrontmatter` type inside files need to be updated with `CollectionEntry<"blog">["data"]`.
+Therefore, all the `BlogFrontmatter` type inside files need to be updated with `CollectionEntry<"battles">["data"]`.
 
 For example: `src/components/Card.tsx`
 
@@ -153,7 +153,7 @@ import type { CollectionEntry } from "astro:content";
 
 export interface Props {
     href?: string;
-    frontmatter: CollectionEntry<"blog">["data"];
+    frontmatter: CollectionEntry<"battles">["data"];
     secHeading?: boolean;
 }
 ```
