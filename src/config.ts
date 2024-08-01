@@ -5,7 +5,7 @@ export const SITE: Site = {
     author: "Joshua Kalsi",
     profile: "https://joshkalsi.dev/",
     desc: "in the grim darkness of the far future there is only war.",
-    title: "Warzone Navio",
+    title: "Warzone: Navio",
     ogImage: "astropaper-og.jpg",
     lightAndDarkMode: true,
     postPerIndex: 4,

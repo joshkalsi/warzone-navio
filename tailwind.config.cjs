@@ -56,6 +56,7 @@ module.exports = {
       },
       fontFamily: {
         mono: ["IBM Plex Mono", "monospace"],
+        stencil: ["Saira Stencil One", "IBM Plex Mono", "monospace"],
       },
 
       typography: {
