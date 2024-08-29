@@ -5,7 +5,7 @@ modDatetime:
 title: Shadows and Steel
 slug: shadows-and-steel
 featured: false
-draft: true
+draft: false
 tags:
     - t'au empire
     - astra militarum
