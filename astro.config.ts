@@ -50,27 +50,39 @@ export default defineConfig({
                             {
                                 label: "Featured",
                                 name: "featured",
-                                widget: "boolean"
+                                widget: "boolean",
+                                default: false,
+                                required: false,
                             },
                             {
                                 label: "Draft",
                                 name: "draft",
-                                widget: "boolean"
+                                widget: "boolean",
+                                default: true,
+                                required: false,
                             },
                             {
                                 label: "Publish Date",
-                                name: "pubDateTime",
-                                widget: "datetime"
+                                name: "pubDatetime",
+                                widget: "datetime",
+                                default: "{{now}}",
+                                format: "YYYY-MM-DDTHH:mm:ssZ"
+
                             },
                             {
                                 label: "Modified Date",
-                                name: "modDateTime",
-                                widget: "datetime"
+                                name: "modDatetime",
+                                widget: "datetime",
+                                default: "{{now}}",
+                                required: false,
+                                format: "YYYY-MM-DDTHH:mm:ssZ"
                             },
                             {
                                 label: "tags",
                                 name: "tags",
-                                widget: "list"
+                                widget: "list",
+                                summary: "{{fields.tag}}",
+                                field: { label: "Tag", name: "tag", widget: "string" },
                             },
                             {
                                 label: "Description",
