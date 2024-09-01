@@ -86,9 +86,6 @@ export default defineConfig({
                     }
                 ]
             },
-            previewStyles: [
-                '/src/styles/base.css',
-            ]
         }),
     ],
     markdown: {
